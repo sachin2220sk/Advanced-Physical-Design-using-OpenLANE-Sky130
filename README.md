@@ -126,7 +126,7 @@ For this workshop, we will we using “picorv32a” design. The design hierarchy
 
 ### OpenLANE
 
-Go to openLANE_flow directory and and type ./flow.tcl which run in docker that should be installed with OpenLANE tools.
+Go to openLANE_flow directory and and type > ./flow.tcl > which run in docker that should be installed with OpenLANE tools.
 To run OpenLANE interactively, type ./flow.tcl -interactive
 To run OpenLANE in autonomous, type ./flow.tcl -design
 
@@ -134,15 +134,16 @@ To run OpenLANE in autonomous, type ./flow.tcl -design
 
 OpenLANE requires different software to run it. So, run following command :-
 
-package require openlane 0.9  
+> package require openlane 0.9  
 
 ![](Images_Day_1/Capture7.png)
 
 The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :-
 
-prep -design <design_name> 
+> prep -design <design_name> 
 
 design_name = picorv32a
+
 During the preparation stage of OpenLANE, the cell LEF and technology LEF information are combined and are collectively termed as merge.LEF
 
 After Preparation complete look in openlane_flow/designs/picrov32a directory whare, we see runs directory is created.
@@ -164,11 +165,9 @@ To do synthesis run command run_synthesis
 
 After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/synthesis directory where we see yosys_2.stat.rpt which we used for calculates flop ratio, buffer ratio etc.
 
-
 ![](Images_Day_1/Capture13.png)
 
 
-PDK fo
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
