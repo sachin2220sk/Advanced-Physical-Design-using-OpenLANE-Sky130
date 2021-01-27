@@ -13,7 +13,8 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
       <a href="##Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK">Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK</a>
       <ul>
         <li><a href="#ASIC Design Flow">ASIC Design Flow</a></li>
-        <li><a href="#Simplified RTL to GDSII">Simplified RTL to GDSII</a></li>
+        <li><a href="#OpenLANE Based on Serval Open Source Project for ASIC Design Flow">OpenLANE Based on Serval Open Source Project for ASIC Design Flow</a></li>
+        <li><a href="#OpenLANE Introduction">OpenLANE Introduction</a></li>
       </ul>
       </li>
     <li>
@@ -52,21 +53,21 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 
 ![](Images_Day_1/RTL_GDSII.JPG)
 
-### OpenLANE Based on serval Open Source Project
+### OpenLANE Based on Serval Open Source Project for ASIC Design Flow
 
 #### Synthesis
 - yosys :- Generates gate-level netlist.
-- abc :- Performes cell mapping.
-- OpenSTA :- Performes pre-layout STA.
+- abc :- Performs cell mapping.
+- OpenSTA :- Performs pre-layout STA.
 
 #### Floorplanning
-- init_fg :- Define the core area for macro as well the cell sites and the tracks.
+- init_fg :- Define the core area for macro as well the cell sites and tracks.
 - ioplacer :- Place macro input/output ports.
 - pdn :- Generates the prower distrubution network.
 
 #### Placement
 - RePLace :- Performs global placement.
-- OpenDP :- Performes details placement.
+- OpenDP :- Performs details placement.
 
 #### Clock Tree Synthesis.
 - TritonCTS :- Performes clock tree synthesis.
@@ -77,6 +78,8 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 
 #### Sign Off
 - Magic :- Generates GDSII layout file from routed def.
+
+### OpenLANE Introduction
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
