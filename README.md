@@ -12,7 +12,7 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
     <li>
       <a href="##Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK">Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK</a>
       <ul>
-        <li><a href="#skywater-pdk-files">Skywater PDK Files</a></li>
+        <li><a href="#ASIC Design Flow">ASIC Design Flow</a></li>
         <li><a href="#Simplified RTL to GDSII">Simplified RTL to GDSII</a></li>
       </ul>
       </li>
@@ -49,22 +49,22 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ### ASIC Design Flow
-![](Images_Day_1/ASIC.jpg)
+![](Images_Day_1/ASIC.JPG)
 
-###Simplified RTL to GDSII
-![](Images_Day_1/RTL_GDSII.jpg)
+### Simplified RTL to GDSII
+![](Images_Day_1/RTL_GDSII.JPG)
 
-####Synthesis
+#### Synthesis
 
-####Floorplanning
+#### Floorplanning
 
-####Placement
+#### Placement
 
-####Clock Tree Synthesis 
+#### Clock Tree Synthesis 
 
-####Routing
+#### Routing
 
-####Sign Off
+#### Sign Off
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
