@@ -10,7 +10,7 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Day-1-Inception-of-open-source-EDA-and-introduction-to-OpenLANE-and-Sky130-PDK">Day 1 Inception of Open-Source EDA and Introduction to OpenLANE and Sky130 PDK</a>
+      <a href="##Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK">Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK</a>
       <ul>
         <li><a href="#skywater-pdk-files">Skywater PDK Files</a></li>
         <li><a href="#invoking-openlane">Invoking OpenLANE</a></li>
