@@ -99,10 +99,10 @@ sky130A contain two sub-directories:-
 
 File nomenclature is as follows:
 sky130_fd_sc_hd
--sky130 stands for process name
--fd stands for foundry name
--sc stands for standard cell
--hd stands for high density (variant of the pdk) 
+- sky130 stands for process name
+- fd stands for foundry name
+- sc stands for standard cell
+- hd stands for high density (variant of the pdk) 
 
 2.	libs.tech :- Contain files specific to tools that we will  be using for end to end VLSI design.
 
@@ -114,12 +114,12 @@ The design that runs within OpenLANE are extracted from openLANE_flow/designs di
 
 ![](Images_Day_1/Capture5.JPG)
 
-For this  workshop, we will we using “picorv32a” design. The design hierarchy for picorv32a comes with follows components:-
+For this workshop, we will we using “picorv32a” design. The design hierarchy for picorv32a comes with follows components:-
 
 ![](Images_Day_1/Capture6.JPG)
 
--src directory  :- Contains Verilog files and sdc constaint files.
--config.tcl files :- Responsible for various design specific configuration switches and parameters which are used by OpenLANE flow tools. For example configuration file looks like this:-
+- src directory  :- Contains Verilog files and sdc constaint files.
+- config.tcl files :- Responsible for various design specific configuration switches and parameters which are used by OpenLANE flow tools. For example configuration file looks like this:-
 
 
 ![](Images_Day_1/Capture8.JPG)
@@ -133,11 +133,15 @@ To run OpenLANE in autonomous, type ./flow.tcl -design
 ![](Images_Day_1/Capture4.JPG)
 
 OpenLANE requires different software to run it. So, run following command :-
+
 package require openlane 0.9  
 
 ![](Images_Day_1/Capture7.png)
 
-The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :- prep -design <design_name> 
+The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :-
+
+prep -design <design_name> 
+
 design_name = picorv32a
 During the preparation stage of OpenLANE, the cell LEF and technology LEF information are combined and are collectively termed as merge.LEF
 
