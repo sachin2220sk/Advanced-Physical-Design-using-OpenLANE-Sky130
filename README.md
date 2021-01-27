@@ -50,13 +50,20 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ### ASIC Design Flow
 ![](Images_Day_1/ASIC.jpg)
+
 ###Simplified RTL to GDSII
 ![](Images_Day_1/RTL_GDSII.jpg)
+
 ####Synthesis
+
 ####Floorplanning
+
 ####Placement
+
 ####Clock Tree Synthesis 
+
 ####Routing
+
 ####Sign Off
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
