@@ -7,25 +7,26 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 [Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#heading)
 
  * [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](#sub-heading)
-## Day 3 - Design library cell using Magic Layout and ngspice characterization
-## Day 4 - Pre-layout timing analysis and importance of good clock tree
-## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
-## Day 3 - Design library cell using Magic Layout and ngspice characterization
-## Day 4 - Pre-layout timing analysis and importance of good clock tree
-## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
-
-## Day 3 - Design library cell using Magic Layout and ngspice characterization
-## Day 4 - Pre-layout timing analysis and importance of good clock tree
-## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
-## Day 3 - Design library cell using Magic Layout and ngspice characterization
-## Day 4 - Pre-layout timing analysis and importance of good clock tree
-## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
 
 <!-- toc -->
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
->Inception of open-source EDA, OpenLANE and Sky  Inception of open-source EDA, OpenLANE and Sky
-This is a fixture to test heading levels
 
+Inception of open-source EDA, OpenLANE and Sky  Inception of open-source EDA, OpenLANE and Sky
+This is a fixture to test heading levels
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
