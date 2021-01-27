@@ -49,7 +49,7 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ### ASIC Design Flow
-<h3 align="center">Images_Day_1/ASIC.JPG
+<h3 align="center">Images_Day_1/ASIC.JPG</h3>
 
 ### Simplified RTL to GDSII
 ![](Images_Day_1/RTL_GDSII.JPG)
