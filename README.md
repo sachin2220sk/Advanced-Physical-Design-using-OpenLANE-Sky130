@@ -11,5 +11,16 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
 ## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+## Day 3 - Design library cell using Magic Layout and ngspice characterization
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
  Inception of open-source EDA, OpenLANE and Sky  Inception of open-source EDA, OpenLANE and Sky
