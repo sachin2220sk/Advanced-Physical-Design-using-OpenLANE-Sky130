@@ -135,7 +135,7 @@ To run OpenLANE in autonomous, type ./flow.tcl -design
 OpenLANE requires different software to run it. So, run following command :-
 package require openlane 0.9  
 
-![](Images_Day_1/Capture7.JPG)
+![](Images_Day_1/Capture7.png)
 
 The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :- prep -design <design_name> 
 design_name = picorv32a
@@ -161,7 +161,7 @@ To do synthesis run command run_synthesis
 After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/synthesis directory where we see yosys_2.stat.rpt which we used for calculates flop ratio, buffer ratio etc.
 
 
-![](Images_Day_1/Capture13.JPG)
+![](Images_Day_1/Capture13.png)
 
 
 PDK fo
