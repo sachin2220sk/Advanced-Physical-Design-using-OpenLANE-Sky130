@@ -99,29 +99,24 @@ sky130A contain two sub-directories:-
 
 File nomenclature is as follows:
 sky130_fd_sc_hd
-sky130 stands for process name
-fd stands for foundry name
-sc stands for standard cell
-hd stands for high density (variant of the pdk) 
+-sky130 stands for process name
+-fd stands for foundry name
+-sc stands for standard cell
+-hd stands for high density (variant of the pdk) 
 
-2.	libs.ref :- Contain files specific to tools that we will  be using for end to end VLSI design.
+2.	libs.tech :- Contain files specific to tools that we will  be using for end to end VLSI design.
 
 
 ![](Images_Day_1/Capture3.JPG)
 
 
-
-Designs Directory  
 The design that runs within OpenLANE are extracted from openLANE_flow/designs directory 
-
 
 ![](Images_Day_1/Capture5.JPG)
 
-Designs Directory  Hierarchy
 For this  workshop, we will we using “picorv32a” design. The design hierarchy for picorv32a comes with follows components:-
 
-
-![](Images_Day_6/Capture1.JPG)
+![](Images_Day_6/Capture6.JPG)
 
 1.	src directory  :- Contains Verilog files and sdc constaint files.
 2.	config.tcl files :- Responsible for various design specific configuration switches and parameters which are used by OpenLANE flow tools. For example configuration file looks like this:-
@@ -139,7 +134,6 @@ To run OpenLANE in autonomous, type ./flow.tcl -design
 
 OpenLANE requires different software to run it. So, run following command :-
 package require openlane 0.9  
-
 
 ![](Images_Day_1/Capture7.JPG)
 
