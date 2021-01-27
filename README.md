@@ -4,7 +4,7 @@
 
 
 
--[Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK)
+-[Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#heading)
  
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
