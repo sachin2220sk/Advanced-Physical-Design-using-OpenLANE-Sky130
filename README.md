@@ -1,4 +1,4 @@
-# Advanced-Physical-Design-using-OpenLANE-Sky130
+<h3 align="center"> Advanced-Physical-Design-using-OpenLANE-Sky130</h3>
 
 ![](Images_Day_1/Advanced-Physical-Design-using-OpenLANE_Sky130_1.png)
 
