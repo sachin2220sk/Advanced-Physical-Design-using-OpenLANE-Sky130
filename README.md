@@ -49,22 +49,34 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ### ASIC Design Flow
-<h3 align="center">Images_Day_1/ASIC.JPG</h3>
 
-### Simplified RTL to GDSII
 ![](Images_Day_1/RTL_GDSII.JPG)
 
+### OpenLANE Based on serval Open Source Project
+
 #### Synthesis
+- yosys :- Generates gate-level netlist.
+- abc :- Performes cell mapping.
+- OpenSTA :- Performes pre-layout STA.
 
 #### Floorplanning
+- init_fg :- Define the core area for macro as well the cell sites and the tracks.
+- ioplacer :- Place macro input/output ports.
+- pdn :- Generates the prower distrubution network.
 
 #### Placement
+- RePLace :- Performs global placement.
+- OpenDP :- Performes details placement.
 
-#### Clock Tree Synthesis 
+#### Clock Tree Synthesis.
+- TritonCTS :- Performes clock tree synthesis.
 
 #### Routing
+- FastRoute :- Performs global routing.
+- TritonRoute :- Performs detailed routing.
 
 #### Sign Off
+- Magic :- Generates GDSII layout file from routed def.
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
