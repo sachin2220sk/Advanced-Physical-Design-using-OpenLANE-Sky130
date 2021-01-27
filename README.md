@@ -116,10 +116,10 @@ The design that runs within OpenLANE are extracted from openLANE_flow/designs di
 
 For this  workshop, we will we using “picorv32a” design. The design hierarchy for picorv32a comes with follows components:-
 
-![](Images_Day_6/Capture6.JPG)
+![](Images_Day_1/Capture6.JPG)
 
-1.	src directory  :- Contains Verilog files and sdc constaint files.
-2.	config.tcl files :- Responsible for various design specific configuration switches and parameters which are used by OpenLANE flow tools. For example configuration file looks like this:-
+-src directory  :- Contains Verilog files and sdc constaint files.
+-config.tcl files :- Responsible for various design specific configuration switches and parameters which are used by OpenLANE flow tools. For example configuration file looks like this:-
 
 
 ![](Images_Day_1/Capture8.JPG)
