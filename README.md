@@ -171,6 +171,36 @@ After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/s
 
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
+### Important Parameter related to floorplans 
+
+- A "die " which consists of "core" is small semiconductor material specimen on which the fundamental circuit is fabrication. Placed all logical cell inside the “core”.
+- Netlist :- The connectively information between the gates is coded using VHDL/Verilog language is called as “netlist”
+- Utilization Factor :- It is ratio of area occupied by netlist to total area of the core. When utilization factor is 1 then it means “core” is completely occupied. Ideally we don’t go with 100% utilization. We go with 50-60% utilization i.e., 0.5 or 0.6.
+- Aspect ratio :- It is ratio of height of core to width of core. When aspect ratio is 1 then chip is in square shape.
+
+### Floorplan using OpenLANE
+
+The season started with introduction to keyword “tag” which used to provide user defined name to run. This is implement while preparing the design by following command: -
+< prep -design <design_name> -tag <tag_name>
+Design_name = picorv32a and tag_name = woekshop
+
+This creates new directory within designs/picorv32a/runs directory as “woekshop”.
+Here, we change CLOCK_PERIOD variable
+
+Then run synthesis.
+
+To run floorplan in openLANE run following command: -
+
+< run_floorplan
+
+Floorplan also runs as per the configuration settings present in the designs config.tcl files. 
+
+After Synthesis complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/floorplan directory where we see "picorv32a .floorplan.def" file which contain information about core area and placement of cell sites.
+
+< UNIT DISTANCE MICRONS 1000 represents 1000 data base unit per 1 Micron.
+< DIEAREA ( 0 0 ) ( 1004135 766580 ) represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
+
+
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
 
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
