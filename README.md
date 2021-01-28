@@ -163,7 +163,7 @@ To do synthesis run command run_synthesis
 
 ![](Images_Day_1/Capture12.JPG)
 
-After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/synthesis directory where we see yosys_2.stat.rpt which we used for calculates flop ratio, buffer ratio etc.
+After Synthesis complete look in openlane_flow/designs/picrov32a/runs/23-01_16-45/reports/synthesis directory where we see yosys_2.stat.rpt which we used for calculates flop ratio, buffer ratio etc.
 
 ![](Images_Day_1/Capture13.png)
 
@@ -181,6 +181,7 @@ After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/s
 ### Floorplan using OpenLANE
 
 The season started with introduction to keyword “tag” which used to provide user defined name to run. This is implement while preparing the design by following command: -
+
 > prep -design <design_name> -tag <tag_name>
 
 Design_name = picorv32a and tag_name = woekshop
@@ -202,6 +203,48 @@ After Synthesis complete look in openlane_flow/designs/picrov32a/runs/woekshop/r
 
 > DIEAREA ( 0 0 ) ( 1004135 766580 ) represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
 
+### View Floorplan using Magic tool
+
+We require three file: -
+-	Magic Technology file 
+-	Magic lef file from preparation  stages
+-	Floorplan generated def file
+
+Command for viewing floorplan using magic tool
+
+>	Magic -T <magic tech file> lef read <lef file> def read <def file>
+  
+Here, magic tech file = sky130A.tech
+
+lef file = merged.lef
+
+def file = picorv32a.floorplan.def
+
+Press s followed by v to select and view floorplan of whole design: -
+  
+### Placement
+
+Usually happens in two stages: -
+-	Global Placement: - Main aim is optimization. This is done by reducing wire length by Half Perimeter Wire Length (HPWL).
+-	Detail Placement: - Main aim is legalization.
+To run placement is use following command: -
+>	run_placement
+ After Placement complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/placement directory where we see picorv32a .placement.def file
+ 
+### View Placement using Magic tool
+We require three file: -
+-	Magic Technology file 
+-	Magic lef file from preparation  stages
+-	Placement generated def file
+
+Command for viewing floorplan using magic tool
+>	Magic -T <magic tech file> lef read <lef file> def read <def file>
+
+Here, magic tech file = sky130A.tech
+lef file = merged.lef
+def file = picorv32a.placement.def
+
+Press s followed by v to select and view floorplan of whole design: -
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
 
