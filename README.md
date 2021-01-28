@@ -134,13 +134,13 @@ To run OpenLANE in autonomous, type ./flow.tcl -design
 
 OpenLANE requires different software to run it. So, run following command :-
 
-> package require openlane 0.9  
+`package require openlane 0.9` 
 
 ![](Images_Day_1/Capture7.png)
 
 The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :-
 
-> prep -design <design_name> 
+`prep -design <design_name>` 
 
 design_name = picorv32a
 
@@ -186,22 +186,38 @@ The season started with introduction to keyword “tag” which used to provide 
 
 Design_name = picorv32a and tag_name = woekshop
 
+![](Images_Day_2/Capture1.JPG)
+![](Images_Day_2/Capture2.JPG)
+
 This creates new directory within designs/picorv32a/runs directory as “woekshop”.
+![](Images_Day_2/Capture3.JPG)
+
 Here, we change CLOCK_PERIOD variable
+![](Images_Day_2/Capture4.JPG)
 
 Then run synthesis.
+![](Images_Day_2/Capture5.JPG)
+![](Images_Day_2/Capture6.JPG)
 
 To run floorplan in openLANE run following command: -
 
 `run_floorplan`
 
+![](Images_Day_2/Capture7.JPG)
+
 Floorplan also runs as per the configuration settings present in the designs config.tcl files. 
+
+![](Images_Day_2/Capture8.JPG)
 
 After Synthesis complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/floorplan directory where we see "picorv32a .floorplan.def" file which contain information about core area and placement of cell sites.
 
-> UNIT DISTANCE MICRONS 1000 represents 1000 data base unit per 1 Micron.
+![](Images_Day_2/Capture9.JPG)
 
-> DIEAREA ( 0 0 ) ( 1004135 766580 ) represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
+![](Images_Day_2/Capture10.JPG)
+
+`UNIT DISTANCE MICRONS 1000` represents 1000 data base unit per 1 Micron.
+
+`DIEAREA ( 0 0 ) ( 1004135 766580 )` represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
 
 ### View Floorplan using Magic tool
 
@@ -212,7 +228,7 @@ We require three file: -
 
 Command for viewing floorplan using magic tool
 
->	Magic -T <magic tech file> lef read <lef file> def read <def file>
+`Magic -T <magic tech file> lef read <lef file> def read <def file>`
   
 Here, magic tech file = sky130A.tech
 
@@ -220,31 +236,49 @@ lef file = merged.lef
 
 def file = picorv32a.floorplan.def
 
+![](Images_Day_2/Capture11.JPG)
+
 Press s followed by v to select and view floorplan of whole design: -
+
+![](Images_Day_2/Capture12.JPG)
   
 ### Placement
 
 Usually happens in two stages: -
 -	Global Placement: - Main aim is optimization. This is done by reducing wire length by Half Perimeter Wire Length (HPWL).
 -	Detail Placement: - Main aim is legalization.
+
 To run placement is use following command: -
->	run_placement
+
+`run_placement`
+
+![](Images_Day_2/Capture13.JPG)
+
+![](Images_Day_2/Capture14.JPG)
+
  After Placement complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/placement directory where we see picorv32a .placement.def file
  
 ### View Placement using Magic tool
+
 We require three file: -
+
 -	Magic Technology file 
 -	Magic lef file from preparation  stages
 -	Placement generated def file
 
 Command for viewing floorplan using magic tool
->	Magic -T <magic tech file> lef read <lef file> def read <def file>
+
+`Magic -T <magic tech file> lef read <lef file> def read <def file>`
 
 Here, magic tech file = sky130A.tech
 lef file = merged.lef
 def file = picorv32a.placement.def
 
+![](Images_Day_2/Capture15.JPG)
+
 Press s followed by v to select and view floorplan of whole design: -
+
+![](Images_Day_2/Capture16.JPG)
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
 
