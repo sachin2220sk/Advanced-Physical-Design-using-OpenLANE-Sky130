@@ -182,7 +182,7 @@ After Synthesis complete look in openlane_flow/designs/picrov32a/runs/23-01_16-4
 
 The season started with introduction to keyword “tag” which used to provide user defined name to run. This is implement while preparing the design by following command: -
 
-> prep -design <design_name> -tag <tag_name>
+`prep -design <design_name> -tag <tag_name>`
 
 Design_name = picorv32a and tag_name = woekshop
 
@@ -193,7 +193,7 @@ Then run synthesis.
 
 To run floorplan in openLANE run following command: -
 
-> run_floorplan
+`run_floorplan`
 
 Floorplan also runs as per the configuration settings present in the designs config.tcl files. 
 
