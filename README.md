@@ -21,8 +21,8 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
     <li>
       <a href="#Day 2 - Good floorplan vs bad floorplan and introduction to library cells">Day 2 - Good floorplan vs bad floorplan and introduction to library cells</a>
       <ul>
-        <li><a href="#Floorplan">Floorplan</a></li>
-        <li><a href="#View-Placement-in-Magic">View Placement in Magic</a></li>
+        <li><a href="#Important Parameter related to floorplans ">Important Parameter related to floorplans </a></li>
+        <li><a href="#Floorplan using OpenLANE">Floorplan using OpenLANE</a></li>
       </ul>
     </li>
     <li>
@@ -181,7 +181,8 @@ After Synthesis complete look in openlane_flow/designs/picrov32a/runs//reports/s
 ### Floorplan using OpenLANE
 
 The season started with introduction to keyword “tag” which used to provide user defined name to run. This is implement while preparing the design by following command: -
-< prep -design <design_name> -tag <tag_name>
+> prep -design <design_name> -tag <tag_name>
+
 Design_name = picorv32a and tag_name = woekshop
 
 This creates new directory within designs/picorv32a/runs directory as “woekshop”.
@@ -191,14 +192,15 @@ Then run synthesis.
 
 To run floorplan in openLANE run following command: -
 
-< run_floorplan
+> run_floorplan
 
 Floorplan also runs as per the configuration settings present in the designs config.tcl files. 
 
 After Synthesis complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/floorplan directory where we see "picorv32a .floorplan.def" file which contain information about core area and placement of cell sites.
 
-< UNIT DISTANCE MICRONS 1000 represents 1000 data base unit per 1 Micron.
-< DIEAREA ( 0 0 ) ( 1004135 766580 ) represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
+> UNIT DISTANCE MICRONS 1000 represents 1000 data base unit per 1 Micron.
+
+> DIEAREA ( 0 0 ) ( 1004135 766580 ) represents the placement of die as follows ( Lower_right_x-value Lower_left_y-value ) ( Upper_right_x-value Upper_right_y-value )
 
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
