@@ -136,8 +136,6 @@ OpenLANE requires different software to run it. So, run following command :-
 
 `package require openlane 0.9` 
 
-![](Images_Day_1/Capture7.png)
-
 The keyword “prep” is used to preparing the design which effectively used by OpenLANE tools. Run command :-
 
 `prep -design <design_name>` 
@@ -145,6 +143,8 @@ The keyword “prep” is used to preparing the design which effectively used by
 design_name = picorv32a
 
 During the preparation stage of OpenLANE, the cell LEF and technology LEF information are combined and are collectively termed as merge.LEF
+
+![](Images_Day_1/Capture7.png)
 
 After Preparation complete look in openlane_flow/designs/picrov32a directory whare, we see runs directory is created.
 
@@ -157,7 +157,9 @@ Inside the runs directory we have directory with present date and time and insid
 
 The config.tcl file contains all the parameters used by OpenLANE for this specific run.
 
-To do synthesis run command run_synthesis
+To do synthesis run command 
+
+`run_synthesis`
 
 ![](Images_Day_1/Capture11.JPG)
 
@@ -209,7 +211,7 @@ Floorplan also runs as per the configuration settings present in the designs con
 
 ![](Images_Day_2/Capture8.JPG)
 
-After Synthesis complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/floorplan directory where we see "picorv32a .floorplan.def" file which contain information about core area and placement of cell sites.
+After floorplan complete look in openlane_flow/designs/picrov32a/runs/woekshop/results/floorplan directory where we see "picorv32a .floorplan.def" file which contain information about core area and placement of cell sites.
 
 ![](Images_Day_2/Capture9.JPG)
 
@@ -240,7 +242,7 @@ def file = picorv32a.floorplan.def
 
 Press s followed by v to select and view floorplan of whole design: -
 
-![](Images_Day_2/Capture12.JPG)
+![](Images_Day_2/Capture12.png)
   
 ### Placement
 
@@ -278,7 +280,7 @@ def file = picorv32a.placement.def
 
 Press s followed by v to select and view floorplan of whole design: -
 
-![](Images_Day_2/Capture16.JPG)
+![](Images_Day_2/Capture16.png)
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
 
