@@ -189,16 +189,21 @@ The season started with introduction to keyword “tag” which used to provide 
 Design_name = picorv32a and tag_name = woekshop
 
 ![](Images_Day_2/Capture1.JPG)
+
 ![](Images_Day_2/Capture2.JPG)
 
 This creates new directory within designs/picorv32a/runs directory as “woekshop”.
+
 ![](Images_Day_2/Capture3.JPG)
 
 Here, we change CLOCK_PERIOD variable
+
 ![](Images_Day_2/Capture4.JPG)
 
 Then run synthesis.
+
 ![](Images_Day_2/Capture5.JPG)
+
 ![](Images_Day_2/Capture6.JPG)
 
 To run floorplan in openLANE run following command: -
