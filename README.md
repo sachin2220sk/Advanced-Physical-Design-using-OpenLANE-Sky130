@@ -346,5 +346,50 @@ Propagation Delay: - It measured between 50% transition point of input and outpu
 
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
 
+#### PnR Guideline for Standard Cell Ports
+-	Input and output port must be placed on vertical and horizontal tracks.
+-	Width of standard cell must be odd multiple of track horizonal pitch and likewise height should an odd multiple of track vertical pitch.
+`tracks.info` file which is present in `/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd` directory contains the offset and pitch information of different layers.
+To view `tracks.info` file run following command: -
+`less tracks.info`
+
+Here, we observe the metal1 layer or horizontal layer is at an offset of 0.17 and pitch of 0.34. The metal2 layer or horizontal layer is at offset of 0.23 and pitch of 0.46 and so on.
+
+### Analysis of Inverter Layout using Magic tool
+Run following command to open layout of inverter using magic tool
+`magic -T sky130A.tech sky130_inv.mag &`
+To show the grids in magic tool use `grid` command magic terminal as shown in below and for any kind of help run `grid help` command
+`grid 0.46um 0.34um 0.23um 0.17um`
+Now to save this run following command in magic terminal
+`save <file_name>`
+Here, file_name = sky130_vsdinv.mag
+This creates new file (i.e., sky130_vsdinv.mag) in `/Desktop/work/tools/openlane_working_dir/openLANE_flow/vsdstdcelldesign` directory
+Now, open this new created layout file (i.e., sky130_vsdinv.mag) using magic tool.
+Magic tool allows for user to create their cell lef  file. For this run command `lef write` in magic terminal
+Now go to `/Desktop/work/tools/openlane_working_dir/openLANE_flow/vsdstdcelldesign` directory where we see new lef file is created (i.e., sky130_vdsinv.lef).
+### Include Standard Cell into OpenLANE
+Use following command to copy `sky130_vsdinv.lef` file into `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
+`cp sky130_vsdinv.lef/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src `
+Also, copy all .lib files to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
+
+Now come to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a` directory and edit `config.tcl` file.
+Next, we need to prepare the design again using openLANE. For this we use following command 
+`prep -design <design_name> -tag <tag_name> -overwrite`
+Here design name = picorv32a
+Tag name = 23
+And “-overwrite” is significant for overwrites the new changes made in `config.tcl` file
+Once preparation is complete we run following commands to include the additional lef file in flow: -
+`set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`
+  
+`add_lefs -src $lefs`
+
+Next, we need to run synthesis.
+
+Now, we open the design using magic tool 
+
+On zoom in and run command `expand` in magic terminal to see layout of standard cell.
+
+
+
 ## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
