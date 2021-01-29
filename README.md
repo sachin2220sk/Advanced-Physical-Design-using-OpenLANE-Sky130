@@ -23,13 +23,19 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
       <ul>
         <li><a href="#Important Parameter related to floorplans ">Important Parameter related to floorplans </a></li>
         <li><a href="#Floorplan using OpenLANE">Floorplan using OpenLANE</a></li>
+        <li><a href="#View Floorplan using Magic tool">View Floorplan using Magic tool</a></li>
+        <li><a href="#Placement using OpenLANE">Placement using OpenLANE</a></li>
+        <li><a href="#View Placement using Magic tool">View Placement using Magic tool</a></li>
       </ul>
     </li>
     <li>
       <a href="#Day 3 - Design library cell using Magic Layout and ngspice characterization">Day 3 - Design library cell using Magic Layout and ngspice characterization</a>
       <ul>
-        <li><a href="#Extraction to Spice using Magic">Extraction to Spice using Magic</a></li>
-        <li><a href="#Spice Simulation">Spice Simulation</a></li>
+        <li><a href="#Cloning Design File from GitHUB Repository and Copy Tech File">Cloning Design File from GitHUB Repository and Copy Tech File</a></li>
+        <li><a href="#Inverter Layout using Magic tool">Inverter Layout using Magic tool</a></li>
+        <li><a href="#Extract Spice file using Magic tool">Extract Spice file using Magic tool</a></li>
+        <li><a href="#Understanding of spice file using ngspice">Understanding of spice file using ngspice</a></li>
+        <li><a href="#Characteristics of Inverter">Characteristics of Inverter</a></li>
       </ul>
     </li>
     <li>
@@ -50,6 +56,7 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
   </details>
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
+
 ### ASIC Design Flow
 
 ![](Images_Day_1/RTL_GDSII.JPG)
@@ -98,7 +105,7 @@ sky130A contain two sub-directories:-
 ![](Images_Day_1/Capture2.JPG)
 
 File nomenclature is as follows:
-sky130_fd_sc_hd
+`sky130_fd_sc_hd`
 - sky130 stands for process name
 - fd stands for foundry name
 - sc stands for standard cell
@@ -249,7 +256,7 @@ Press s followed by v to select and view floorplan of whole design: -
 
 ![](Images_Day_2/Capture12.png)
   
-### Placement
+### Placement using OpenLANE
 
 Usually happens in two stages: -
 -	Global Placement: - Main aim is optimization. This is done by reducing wire length by Half Perimeter Wire Length (HPWL).
@@ -308,6 +315,32 @@ Use following command for viewing inverter using magic tool
 `magic -T sky130A.tech sky130_inv.mag &`
 
 ### Extract Spice file using Magic tool
+
+88Use following command in sequence on magic terminal for extraction of spice file
+
+` extract all
+  ext2spice cthresh 0 rthresh 0
+  ext2spice`
+
+Now go to `/Desktop/work/tools/openlsne_working_dir/openLANE_flow/vsdstdcelldesign` directory where we see `sky130_inv.ext` and `sky130_inv.spice` file.
+
+#### Understanding of spice file using ngspice
+
+Do some modification in ` sky130_inv.spice` file
+
+Now open the `sky130_inv.spice` file using ngspice
+
+Now we can view the plot using following command
+
+`plot y vs time a`
+
+### Characteristics of Inverter
+
+Rise Time: - It is time during transition, when output value switches from 20% to 80% of maximum value.
+
+Fall Time: - It is time during transition, when output value switches from 80% to 20% of maximum value.
+
+Propagation Delay: - It measured between 50% transition point of input and output waveform.
 
 
 
