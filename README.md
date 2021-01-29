@@ -228,9 +228,9 @@ We require three file: -
 -	Magic lef file from preparation  stages
 -	Floorplan generated def file
 
-Command for viewing floorplan using magic tool
+Use following command for viewing floorplan using magic tool
 
-`Magic -T <magic tech file> lef read <lef file> def read <def file>`
+`magic -T <magic tech file> lef read <lef file> def read <def file>`
   
 Here, magic tech file = sky130A.tech
 
@@ -268,9 +268,9 @@ We require three file: -
 -	Magic lef file from preparation  stages
 -	Placement generated def file
 
-Command for viewing floorplan using magic tool
+Use following command for viewing floorplan using magic tool
 
-`Magic -T <magic tech file> lef read <lef file> def read <def file>`
+`magic -T <magic tech file> lef read <lef file> def read <def file>`
 
 Here, magic tech file = sky130A.tech
 lef file = merged.lef
@@ -283,6 +283,28 @@ Press s followed by v to select and view floorplan of whole design: -
 ![](Images_Day_2/Capture16.png)
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization
+
+### Cloning Design File from GitHUB Repository and Copy Tech File
+
+Use following command for clone design file from GitHUB repository to `openlan_working_dir/openLANE_flow` directory
+
+`git clone https://github.com/nickson-jose/vsdstdcelldesign`
+
+After cloning complete look in Desktop/work/tools/ openlan_working_dir/openLANE_flow directory where we see `sky130A_inv.mag` file.
+
+Now, use following command for copy tech (i.e, sky130A.tech) file which is present in the `openlane_working_dir/pdks/sky130A/libs.tech/magic` directory, to the `vsdstdcelldesign` directory in openLANE_flow.
+
+` cp sky130A.tech /home/sachinkumar/Desktop/work/tool/openlan_working_dir/openLANE_flow/ vsdstdcelldesign`
+
+### Inverter Layout using Magic tool
+
+Use following command for viewing inverter using magic tool
+
+`magic -T sky130A.tech sky130_inv.mag &`
+
+### Extract Spice file using Magic tool
+
+
 
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
 
