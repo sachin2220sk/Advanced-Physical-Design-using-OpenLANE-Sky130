@@ -302,18 +302,18 @@ Use following command for clone design file from GitHUB repository to `openlan_w
 
 `git clone https://github.com/nickson-jose/vsdstdcelldesign`
 
-![](Images_Day_3/Capture0.png)
+![](Images_Day_3/Capture0.JPG)
 
 After cloning complete look in Desktop/work/tools/ openlan_working_dir/openLANE_flow directory where we see `sky130A_inv.mag` file.
 
-![](Images_Day_3/Capture1.png)
+![](Images_Day_3/Capture1.JPG)
 
 Now, use following command for copy tech (i.e, sky130A.tech) file which is present in the `openlane_working_dir/pdks/sky130A/libs.tech/magic` directory, to the `vsdstdcelldesign` directory in openLANE_flow.
 
 ` cp sky130A.tech /home/sachinkumar/Desktop/work/tool/openlan_working_dir/openLANE_flow/vsdstdcelldesign`
 
 
-![](Images_Day_3/Capture2.png)
+![](Images_Day_3/Capture2.JPG)
 
 ### Inverter Layout using Magic tool
 
@@ -321,7 +321,7 @@ Use following command for viewing inverter using magic tool
 
 `magic -T sky130A.tech sky130_inv.mag &`
 
-![](Images_Day_3/Capture4.png)
+![](Images_Day_3/Capture4.JPG)
 
 
 ![](Images_Day_3/Capture5.png)
@@ -335,32 +335,32 @@ Use following command for viewing inverter using magic tool
 `ext2spice`
   
  
-![](Images_Day_3/Capture8.png)
+![](Images_Day_3/Capture8.JPG)
 
 Now go to `/Desktop/work/tools/openlsne_working_dir/openLANE_flow/vsdstdcelldesign` directory where we see `sky130_inv.ext` and `sky130_inv.spice` file.
 
-![](Images_Day_3/Capture9.png)
+![](Images_Day_3/Capture9.JPG)
 
 #### Understanding of spice file using ngspice
 
 Do some modification in ` sky130_inv.spice` file
 
 
-![](Images_Day_3/Capture10.png)
+![](Images_Day_3/Capture10.JPG)
 
 Now open the `sky130_inv.spice` file using ngspice using following command: -
 `ngspice sky130_inv.spice`
 
-![](Images_Day_3/Capture11.png)
+![](Images_Day_3/Capture11.JPG)
 
 
-![](Images_Day_3/Capture12.png)
+![](Images_Day_3/Capture12.JPG)
 
 Now we can view the plot using following command
 
 `plot y vs time a`
 
-![](Images_Day_3/Capture13.png)
+![](Images_Day_3/Capture13.JPG)
 
 ![](Images_Day_3/Capture14.png)
 
@@ -388,10 +388,10 @@ To view `tracks.info` file run following command: -
 `less tracks.info`
 
 
-![](Images_Day_4/Capture2.png)
+![](Images_Day_4/Capture2.JPG)
 
 
-![](Images_Day_4/Capture3.png)
+![](Images_Day_4/Capture3.JPG)
 
 Here, we observe the metal1 layer or horizontal layer is at an offset of 0.17 and pitch of 0.34. The metal2 layer or horizontal layer is at offset of 0.23 and pitch of 0.46 and so on.
 
@@ -402,13 +402,13 @@ Run following command to open layout of inverter using magic tool
 `magic -T sky130A.tech sky130_inv.mag &`
 
 
-![](Images_Day_4/Capture1.png)
+![](Images_Day_4/Capture1.JPG)
 
 To show the grids in magic tool use `grid` command magic terminal as shown in below and for any kind of help run `grid help` command
 
 `grid 0.46um 0.34um 0.23um 0.17um`
 
-![](Images_Day_4/Capture4.png)
+![](Images_Day_4/Capture4.JPG)
 
 
 ![](Images_Day_4/Capture5.png)
@@ -420,27 +420,27 @@ Now to save this run following command in magic terminal
 Here, file_name = sky130_vsdinv.mag
 
 
-![](Images_Day_4/Capture7.png)
+![](Images_Day_4/Capture7.JPG)
 
 This creates new file (i.e., sky130_vsdinv.mag) in `/Desktop/work/tools/openlane_working_dir/openLANE_flow/vsdstdcelldesign` directory
 
 
-![](Images_Day_4/Capture8.png)
+![](Images_Day_4/Capture8.JPG)
 
 Now, open this new created layout file (i.e., sky130_vsdinv.mag) using magic tool.
 
 
-![](Images_Day_4/Capture9.png)
+![](Images_Day_4/Capture9.JPG)
 
 Magic tool allows for user to create their cell lef  file. For this run command `lef write` in magic terminal
 
 
-![](Images_Day_4/Capture10.png)
+![](Images_Day_4/Capture10.JPG)
 
 Now go to `/Desktop/work/tools/openlane_working_dir/openLANE_flow/vsdstdcelldesign` directory where we see new lef file is created (i.e., sky130_vdsinv.lef).
 
 
-![](Images_Day_4/Capture11.png)
+![](Images_Day_4/Capture11.JPG)
 
 ### Include Standard Cell into OpenLANE
 
@@ -449,24 +449,24 @@ Use following command to copy `sky130_vsdinv.lef` file into `/home/sachinkumar/D
 `cp sky130_vsdinv.lef/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src `
 
 
-![](Images_Day_4/Capture12.png)
+![](Images_Day_4/Capture12.JPG)
 
 
-![](Images_Day_4/Capture13.png)
+![](Images_Day_4/Capture13.JPG)
 
 Also, copy all .lib files to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
 
 
-![](Images_Day_4/Capture14.png)
+![](Images_Day_4/Capture14.JPG)
 
 
-![](Images_Day_4/Capture15.png)
+![](Images_Day_4/Capture15.JPG)
 
 Now come to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a` directory and edit `config.tcl` file.
 
-![](Images_Day_4/Capture16.png)
+![](Images_Day_4/Capture16.JPG)
 
-![](Images_Day_4/Capture17.png)
+![](Images_Day_4/Capture17.JPG)
 
 Next, we need to prepare the design again using openLANE. For this we use following command 
 
@@ -479,7 +479,7 @@ Tag name = 25-01_12-58
 And “-overwrite” is significant for overwrites the new changes made in `config.tcl` file
 
 
-![](Images_Day_4/Capture18.png)
+![](Images_Day_4/Capture18.JPG)
 
 Once preparation is complete we run following commands to include the additional lef file in flow: -
 
@@ -490,10 +490,10 @@ Once preparation is complete we run following commands to include the additional
 Next, we need to run synthesis.
 
 
-![](Images_Day_4/Capture19.png)
+![](Images_Day_4/Capture19.JPG)
 
 
-![](Images_Day_4/Capture20.png)
+![](Images_Day_4/Capture20.JPG)
 
 Now, we open the design using magic tool 
 
