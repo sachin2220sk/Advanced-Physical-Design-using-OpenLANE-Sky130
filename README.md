@@ -40,8 +40,11 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
     </li>
     <li>
       <a href="#Day 4 - Pre-layout timing analysis and importance of good clock tree">Day 4 - Pre-layout timing analysis and importance of good clock tree</a>
-      <ul>
-        <li><a href="#LEF File">LEF File</a></li>    
+      <ul>  
+        <li><a href="#PnR Guideline for Standard Cell Ports">PnR Guideline for Standard Cell Ports</a></li>   
+        <li><a href="#Analysis of Inverter Layout using Magic tool">Analysis of Inverter Layout using Magic tool</a></li>   
+        <li><a href="#Include Standard Cell into OpenLANE">Include Standard Cell into OpenLANE</a></li>
+        <li><a href="#LEF File">LEF File</a></li> 
       </ul>
     </li>
     <li>
@@ -376,7 +379,7 @@ Propagation Delay: - It measured between 50% transition point of input and outpu
 
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
 
-#### PnR Guideline for Standard Cell Ports
+### PnR Guideline for Standard Cell Ports
 
 -	Input and output port must be placed on vertical and horizontal tracks.
 
@@ -385,11 +388,11 @@ Propagation Delay: - It measured between 50% transition point of input and outpu
 `tracks.info` file which is present in `/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd` directory contains the offset and pitch information of different layers.
 
 To view `tracks.info` file run following command: -
+
 `less tracks.info`
 
 
 ![](Images_Day_4/Capture2.JPG)
-
 
 ![](Images_Day_4/Capture3.JPG)
 
@@ -444,7 +447,7 @@ Now go to `/Desktop/work/tools/openlane_working_dir/openLANE_flow/vsdstdcelldesi
 
 ### Include Standard Cell into OpenLANE
 
-Use following command to copy `sky130_vsdinv.lef` file into `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
+Use following command to copy `sky130_vsdinv.lef` file into `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src` folder
 
 `cp sky130_vsdinv.lef/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src `
 
@@ -478,8 +481,7 @@ Tag name = 25-01_12-58
 
 And “-overwrite” is significant for overwrites the new changes made in `config.tcl` file
 
-
-![](Images_Day_4/Capture18.JPG)
+![](Images_Day_4/Capture18.png)
 
 Once preparation is complete we run following commands to include the additional lef file in flow: -
 
