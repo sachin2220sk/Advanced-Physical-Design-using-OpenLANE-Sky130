@@ -569,9 +569,13 @@ And run synthesis
 
 ### Upsizing the cell
 
-For further improvement in the slack value, we need to upsize the cell. To do this we replace the downsize cell with upsize cell
+For further improvement in the slack value, we need to upsize the cell. To do this we replace the downsize cell with upsize cell. This is done using following command: -
+
+` replace_cell _<net_number>_ <buffer_name>`
 
 After this run following command to check the slack value
+
+`report_checks -fields {net cap slew input_pins} -digits 4`
 
 Now write this synthesis file after changes in buffer using following command.
 
