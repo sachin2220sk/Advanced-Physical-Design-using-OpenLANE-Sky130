@@ -497,9 +497,63 @@ Next, we need to run synthesis.
 
 ![](Images_Day_4/Capture20.JPG)
 
+Here, we observed Hold time is positive that’s means there is no hold time violations. And setup slack time is negative. Hence, there is setup time violation.
+
+And chip area is
+
+So, to fix this we set SYNTH_STRATEGY variable to 1 which indicates that we want to prefer more faster response as compared to low area. And set SYNTH_SIZING to 1 that indicates OpenLANE to prefer sizing of cells as compared to including buffer.
+
+Next, run synthesis and after synthesis we get reduced slack value as compared to previous one.
+
+Also, chip area gets increased
+
+Now, run floorplan and then run placement.
+
+### Layout Standard Placed Cell Using Magic Tool
+
+To view the placement of standard cell run following command 
+
+`magic -T /home/sachinkumar/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sly130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`
+
 Now, we open the design using magic tool 
 
 On zoom in and run command `expand` in magic terminal to see layout of standard cell.
+
+### Fixing slack violation
+
+For this we need configuration file which state library location and some initial condition.
+
+
+Also need constraints file (here, my_base.sdc) which is followed by whole VLSI industry . So, copy this file to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
+
+Do some modification to my_base.sdc file
+
+Now run command `sta pre_sta.conf`
+
+Here we get reduced slack
+
+For further reduction in slack value, we need to reduced fan out. To do this run following command
+
+`set ::env(SYNTH_MAX_FANOUT) 4`
+
+And run synthesis
+
+### Upsizing the cell
+
+For further improvement in the slack value, we need to upsize the cell. To do this we replace the downsize cell with upsize cell
+
+After this run following command to check the slack value
+
+Now write this synthesis file after changes in buffer using following command.
+
+`write_verilog /home/sachinkumar/designs/picorv32a/runs/ 25-01_12-58/results/synthesis/picorv32a.synthesis.v`
+
+### Clock Tree Synthesis
+
+
+
+
+
 
 
 
