@@ -643,21 +643,37 @@ To know last run in OpenLANE run following command
 
 `echo $::env(CURRENT_DEF)`
 
+![](Images_Day_5/Capture1.JPG)
+
 ### Generate power distribution network
 
 Run following command to run power distribution network
 
 `run_pdn`
 
+![](Images_Day_5/Capture3.JPG)
+
 ### Routing
+
+![](Images_Day_5/Capture4.JPG)
+
+![](Images_Day_5/Capture5.JPG)
+
+![](Images_Day_5/Capture6.JPG)
+
+![](Images_Day_5/Capture7.JPG)
 
 ### SPEF Extraction
 
 Once the routing is completed, now perform sign-off Post-STA analysis. Run following command for SPEF extraction
 
 `python3 main.py /home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/picorv32a/runs/25-01_12-58/tmp/merged.lef /home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/runs/25-01_12-58/results/routing/picorv32a.def`
+
+![](Images_Day_5/Capture10.png)
   
 ### Modified Netlists
+
+![](Images_Day_5/Capture11.JPG)
 
 -	After performing synthesis we get `picorv32a.synthesis.v`
 
