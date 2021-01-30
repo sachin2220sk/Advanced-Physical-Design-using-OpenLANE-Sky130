@@ -44,14 +44,20 @@ This GitHub repository will demonstrate the work done in Advanced-Physical-Desig
         <li><a href="#PnR Guideline for Standard Cell Ports">PnR Guideline for Standard Cell Ports</a></li>   
         <li><a href="#Analysis of Inverter Layout using Magic tool">Analysis of Inverter Layout using Magic tool</a></li>   
         <li><a href="#Include Standard Cell into OpenLANE">Include Standard Cell into OpenLANE</a></li>
-        <li><a href="#LEF File">LEF File</a></li> 
+        <li><a href="#Layout of Placed Standard Cell Using Magic Tool">Layout of Placed Standard Cell Using Magic Tool</a></li> 
+        <li><a href="#Fixing slack violation">Fixing slack violation</a></li>
+        <li><a href="#Upsizing the cell">Upsizing the cell</a></li>
+        <li><a href="#Clock Tree Synthesis">Clock Tree Synthesis</a></li>
+        <li><a href="#STA using OpenROAD">STA using OpenROAD</a></li>
       </ul>
     </li>
     <li>
       <a href="#Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA">Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA</a>
       <ul>
-        <li><a href="#Generating Power Distribution Network">Generating Power Distribution Network</a></li>
+        <li><a href="#Generating Power Distribution Network">Generate power distribution network</a></li>
+        <li><a href="#Routing">Routing</a></li>
         <li><a href="#SPEF Extraction">SPEF Extraction</a></li>
+        <li><a href="#Modified Netlists">Modified Netlists</a></li>
       </ul>
       </li>
     
@@ -681,4 +687,11 @@ Once the routing is completed, now perform sign-off Post-STA analysis. Run follo
 
 -	And due to routing stage we get last two synthesis file.
 
+## Contact
 
+Sachin Kumar - sachin2220sk@gmail.com
+
+## Acknowledgements
+
+* [Kunal Ghosh - Co-founder (VSD Corp. Pvt. Ltd)](https://github.com/kunalg123)
+* [Nickson Jose - VSD VLSI Engineer](https://github.com/nickson-jose)
