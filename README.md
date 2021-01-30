@@ -639,3 +639,30 @@ Now use following command for further timing analysis
 
 ## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
 
+To know last run in OpenLANE run following command
+
+`echo $::env(CURRENT_DEF)`
+
+### Generate power distribution network
+
+Run following command to run power distribution network
+
+`run_pdn`
+
+### Routing
+
+### SPEF Extraction
+
+Once the routing is completed, now perform sign-off Post-STA analysis. Run following command for SPEF extraction
+
+`python3 main.py /home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/picorv32a/runs/25-01_12-58/tmp/merged.lef /home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/runs/25-01_12-58/results/routing/picorv32a.def`
+  
+### Modified Netlists
+
+-	After performing synthesis we get `picorv32a.synthesis.v`
+
+-	Atter performing CTS we get ` picorv32a.synthesis_cts.v `
+
+-	And due to routing stage we get last two synthesis file.
+
+
