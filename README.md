@@ -501,13 +501,23 @@ Here, we observed Hold time is positive that’s means there is no hold time vio
 
 And chip area is
 
+![](Images_Day_4/Capture21.JPG)
+
 So, to fix this we set SYNTH_STRATEGY variable to 1 which indicates that we want to prefer more faster response as compared to low area. And set SYNTH_SIZING to 1 that indicates OpenLANE to prefer sizing of cells as compared to including buffer.
 
 Next, run synthesis and after synthesis we get reduced slack value as compared to previous one.
 
+![](Images_Day_4/Capture22.JPG)
+
+![](Images_Day_4/Capture23.JPG)
+
 Also, chip area gets increased
 
+![](Images_Day_4/Capture24.JPG)
+
 Now, run floorplan and then run placement.
+
+![](Images_Day_4/Capture25.JPG)
 
 ### Layout Standard Placed Cell Using Magic Tool
 
@@ -515,28 +525,47 @@ To view the placement of standard cell run following command
 
 `magic -T /home/sachinkumar/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sly130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`
 
+![](Images_Day_4/Capture27.JPG)
+
 Now, we open the design using magic tool 
 
 On zoom in and run command `expand` in magic terminal to see layout of standard cell.
+
+![](Images_Day_4/Capture28.png)
 
 ### Fixing slack violation
 
 For this we need configuration file which state library location and some initial condition.
 
+![](Images_Day_4/Capture29.JPG)
+
+![](Images_Day_4/Capture30.JPG)
 
 Also need constraints file (here, my_base.sdc) which is followed by whole VLSI industry . So, copy this file to `/home/sachinkumar/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/src`
 
+![](Images_Day_4/Capture31.JPG)
+
+![](Images_Day_4/Capture32.JPG)
+
 Do some modification to my_base.sdc file
+
+![](Images_Day_4/Capture33.JPG)
 
 Now run command `sta pre_sta.conf`
 
+![](Images_Day_4/Capture34.JPG)
+
 Here we get reduced slack
+
+![](Images_Day_4/Capture35.JPG)
 
 For further reduction in slack value, we need to reduced fan out. To do this run following command
 
 `set ::env(SYNTH_MAX_FANOUT) 4`
 
 And run synthesis
+
+![](Images_Day_4/Capture37.JPG)
 
 ### Upsizing the cell
 
