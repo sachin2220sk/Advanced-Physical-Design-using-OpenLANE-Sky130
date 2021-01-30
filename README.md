@@ -519,7 +519,7 @@ Now, run floorplan and then run placement.
 
 ![](Images_Day_4/Capture25.JPG)
 
-### Layout Standard Placed Cell Using Magic Tool
+### Layout of Placed Standard Cell Using Magic Tool
 
 To view the placement of standard cell run following command 
 
@@ -549,7 +549,7 @@ Also need constraints file (here, my_base.sdc) which is followed by whole VLSI i
 
 Do some modification to my_base.sdc file
 
-![](Images_Day_4/Capture33.JPG)
+![](Images_Day_4/Capture33.png)
 
 Now run command `sta pre_sta.conf`
 
