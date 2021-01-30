@@ -569,7 +569,12 @@ And run synthesis
 
 ### Upsizing the cell
 
-For further improvement in the slack value, we need to upsize the cell. To do this we replace the downsize cell with upsize cell. This is done using following command: -
+
+For further improvement in the slack value, we need to upsize the cell. 
+
+![](Images_Day_4/Capture38__.JPG)
+
+To do this we replace the downsize cell with upsize cell. This is done using following command: -
 
 ` replace_cell _<net_number>_ <buffer_name>`
 
@@ -583,11 +588,53 @@ Now write this synthesis file after changes in buffer using following command.
 
 ### Clock Tree Synthesis
 
+Now, for clock tree synthesis run following command: - 
 
+`run_cts`
 
+![](Images_Day_4/Capture40.JPG)
 
+![](Images_Day_4/Capture41.JPG)
 
+After CTS complete look into `/Desktop/work/tools/openlane_working_dir/openLANE_flow/designs/picorv32a/runs/25-01_12-58/results/synthesis` directory where we see `picorv32a.synthesis.cts.v` is created 
 
+![](Images_Day_4/Capture42.JPG)
+
+### STA using OpenROAD
+
+For timing analysis enter openROAD using command `openroad`
+
+Here, we need to generate .db file which required lef and def files so run following command
+
+For lef file use following command
+
+`read_lef /openLANE_flow/designs/picorv32a/runs/25-01_12-58/tmp/merged.lef`
+
+![](Images_Day_4/Capture47.JPG)
+
+![](Images_Day_4/Capture48.JPG)
+
+For def file use following command
+
+`read_def /openLANE_flow/designs/picorv32a/runs/28-01_12-58/results/cts/picorv32a.cts.def`
+
+![](Images_Day_4/Capture50.JPG)
+
+![](Images_Day_4/Capture51_.JPG)
+
+Now use following command for further timing analysis
+
+`read_verilog /designs/picorv32a/runs/28-01_12-58/results/synthesis/picorv32a.synthesis_cts.v`
+
+`read_liberty $::env(LIB_SYNTH_COMPLETE)`
+
+`link_design picorv32a`
+
+`read_sdc /designs/picorv32a/runs/28-01_12-58/src/my_base.sdc`
+
+`set_propagated_clock [all_clocks]`
+
+`report_checks -path_delay min_max -fields {slew trans net cap input_pin} -format full_clock_expanded -digits 4`
 
 
 ## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
